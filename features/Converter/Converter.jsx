@@ -1,6 +1,8 @@
 import { Spinner } from "@chakra-ui/spinner";
 import { Text } from "@chakra-ui/layout";
+import { Box } from "@chakra-ui/layout";
 import { useCurrency } from "../common/hooks/useCurrency";
+import ConverterHeader from "./components/ConverterHeader";
 
 const Converter = () => {
     const {
@@ -31,13 +33,9 @@ const Converter = () => {
             <Spinner margin='auto 0' size='xl' thickness="4px" speed="0.66s" color="purple.500" emptyColor="purple.200"></Spinner>
         )
     }
-    return(
-        <>
-            <>{amount}</>
-            <>{currencyOne}</>
-            <>{currencyTwo}</>
-        </>
-    )
+    return(<Box width={{base:"90vw", sm:"45vw"}} margin="0 auto">
+        <ConverterHeader/>
+    </Box>)
 }
 
 export default Converter;
