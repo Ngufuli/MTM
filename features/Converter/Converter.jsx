@@ -3,8 +3,8 @@ import { Text } from "@chakra-ui/layout";
 import { Box } from "@chakra-ui/layout";
 import { useCurrency } from "../common/hooks/useCurrency";
 import ConverterHeader from "./components/ConverterHeader";
-import ConverterOption from "./components/converterOption/ConverterOption";
-import ConverterInput from "./components/converterInput";
+import ConverterOption from "./components/ConverterOption/ConverterOption";
+import ConverterInput from "./components/ConverterInput";
 
 const Converter = () => {
     const {
