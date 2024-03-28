@@ -3,7 +3,7 @@ import { Grid, GridItem, Text } from "@chakra-ui/layout";
 import { Box } from "@chakra-ui/layout";
 import { useCurrency } from "../common/hooks/useCurrency";
 import ConverterHeader from "./components/ConverterHeader";
-import ConverterOption from "./components/ConverterOption/ConverterOption.jsx";
+// import ConverterOption from "./components/ConverterOption/ConverterOption.jsx";
 import ConverterInput from "./components/ConverterInput";
 import ConverterDisplay from "./components/ConverterDisplay";
 import { RepeatIcon } from "@chakra-ui/icons";
@@ -42,12 +42,12 @@ const Converter = () => {
         <Grid templateColumns="repeat(5, 1fr)" templateRows="repeat(2, 1fr)" padding={{base:"6", sm:"10"}} gap="1rem" backgroundColor="#e5e5e5" borderRadius="lg">
            
             <GridItem colSpan={{base:5, sm:2}} justifySelf="center" alignSelf="center">
-            <ConverterOption 
+            {/* <ConverterOption 
             symbol={symbolsData.data} 
             currencyList={currencyList} 
             onCurrencyChange={setCurrencyOne}
             currency={currencyOne}
-        /> 
+        />  */}
             </GridItem>
 
             <GridItem display={{base:'none', sm:'block'}} colSpan={1} justifySelf="center" alignSelf="center">
@@ -55,12 +55,12 @@ const Converter = () => {
             </GridItem>
 
             <GridItem colSpan={{base:5, sm:2}} justifySelf="center" alignSelf="center">
-                <ConverterOption 
+                {/* <ConverterOption 
                 symbol={symbolsData.data} 
                 currencyList={currencyList} 
                 onCurrencyChange={setCurrencyTwo}
                 currency={currencyTwo}
-                />
+                /> */}
             </GridItem>
 
             <GridItem colSpan={2}>
