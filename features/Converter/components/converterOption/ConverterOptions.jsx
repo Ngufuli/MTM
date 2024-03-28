@@ -3,7 +3,7 @@ import { Select } from "@chakra-ui/select";
 import { useFlags } from "../../../common/hooks/useFlags";
 import { Avatar } from "@chakra-ui/avatar";
 
-const ConverterOption = ({symbol, currencyList, onCurrencyChange, currency}) => {
+const ConverterOptions = ({symbol, currencyList, onCurrencyChange, currency}) => {
     const {flagUrl} = useFlags(currency)
     return(
         <Flex gap="1rem" padding="1rem" shadow="md" borderRadius="lg">
@@ -21,4 +21,4 @@ const ConverterOption = ({symbol, currencyList, onCurrencyChange, currency}) => 
     )
 }
 
-export default ConverterOption;
+export default ConverterOptions;

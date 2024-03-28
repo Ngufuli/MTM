@@ -3,7 +3,7 @@ import { Grid, GridItem, Text } from "@chakra-ui/layout";
 import { Box } from "@chakra-ui/layout";
 import { useCurrency } from "../common/hooks/useCurrency.js";
 import ConverterHeader from "./components/ConverterHeader";
-import ConverterOption from "./components/ConverterOption";
+import ConverterOption from "./components/converterOption/ConverterOptions.jsx";
 import ConverterInput from "./components/converterInput"
 import ConverterDisplay from "./components/converterDisplay";
 import { RepeatIcon } from "@chakra-ui/icons";
