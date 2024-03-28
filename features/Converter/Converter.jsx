@@ -2,10 +2,10 @@ import { Spinner } from "@chakra-ui/spinner";
 import { Grid, GridItem, Text } from "@chakra-ui/layout";
 import { Box } from "@chakra-ui/layout";
 import { useCurrency } from "../common/hooks/useCurrency.js";
-import ConverterHeader from "./components/ConverterHeader";
+import ConverterHeader from "./components/ConverterHeader/CoverterHeader.jsx";
 import ConverterOption from "./components/converterOption/ConverterOptions.jsx";
-import ConverterInput from "./components/converterInput"
-import ConverterDisplay from "./components/converterDisplay";
+import ConverterInput from "./components/converterInput/ConverterInput.jsx";
+import ConverterDisplay from "./components/converterDisplay/CoverterDisplay.jsx";
 import { RepeatIcon } from "@chakra-ui/icons";
 
 const Converter = () => {
