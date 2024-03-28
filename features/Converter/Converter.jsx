@@ -1,10 +1,12 @@
 import { Spinner } from "@chakra-ui/spinner";
-import { Text } from "@chakra-ui/layout";
+import { Grid, GridItem, Text } from "@chakra-ui/layout";
 import { Box } from "@chakra-ui/layout";
 import { useCurrency } from "../common/hooks/useCurrency";
 import ConverterHeader from "./components/ConverterHeader";
 import ConverterOption from "./components/ConverterOption/ConverterOption";
 import ConverterInput from "./components/ConverterInput";
+import ConverterDisplay from "./components/ConverterDisplay";
+import { RepeatIcon } from "@chakra-ui/icons";
 
 const Converter = () => {
     const {
@@ -37,20 +39,49 @@ const Converter = () => {
     }
     return(<Box width={{base:"90vw", sm:"45vw"}} margin="0 auto">
         <ConverterHeader/>
-        <ConverterOption 
+        <Grid templateColumns="repeat(5, 1fr)" templateRows="repeat(2, 1fr)" padding={{base:"6", sm:"10"}} gap="1rem" backgroundColor="#e5e5e5" borderRadius="lg">
+           
+            <GridItem colSpan={{base:5, sm:2}} justifySelf="center" alignSelf="center">
+            <ConverterOption 
             symbol={symbolsData.data} 
             currencyList={currencyList} 
             onCurrencyChange={setCurrencyOne}
             currency={currencyOne}
-        />
+        /> 
+            </GridItem>
 
-        <ConverterOption 
-            symbol={symbolsData.data} 
-            currencyList={currencyList} 
-            onCurrencyChange={setCurrencyTwo}
-            currency={currencyTwo}
-        />
-        <ConverterInput value={amount} onAmountChange={setAmount}/>
+            <GridItem display={{base:'none', sm:'block'}} colSpan={1} justifySelf="center" alignSelf="center">
+                <RepeatIcon boxSize="2rem" color="purple.500"/>
+            </GridItem>
+
+            <GridItem colSpan={{base:5, sm:2}} justifySelf="center" alignSelf="center">
+                <ConverterOption 
+                symbol={symbolsData.data} 
+                currencyList={currencyList} 
+                onCurrencyChange={setCurrencyTwo}
+                currency={currencyTwo}
+                />
+            </GridItem>
+
+            <GridItem colSpan={2}>
+            <ConverterInput value={amount} onAmountChange={setAmount}/>
+            </GridItem>
+
+            <GridItem colSpan={3} justifySelf="right" alignSelf="right">
+            <ConverterDisplay 
+            amount={amount}
+            currencyOne={currencyOne}
+            currencyTwo={currencyTwo}
+            ratesData={ratesData.data}
+            convertedAmount={convertedAmount}
+            date={date}
+            time={time}
+            />
+            </GridItem>
+        </Grid>
+       
+        <Text marginTop="1rem" fontSize="sm" textAlign="center" color="#e5e5e5">Built with 💜 by <a href="https://ultimaxdev.com">UltimaxDev </a></Text>
+        
     </Box>)
 }
 

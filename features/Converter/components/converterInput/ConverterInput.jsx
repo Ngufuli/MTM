@@ -9,6 +9,8 @@ const ConverterInput = ({value, onAmountChange}) => {
         </FormLabel>
         <Input 
             id="amount" 
+            focusBorderColor="purple.300"
+            borderColor="purple.300"
             size="lg" 
             type="number" 
             value={value} 

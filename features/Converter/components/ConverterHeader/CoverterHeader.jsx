@@ -8,8 +8,8 @@ const ConverterHeader = () => {
             marginTop="20"
             marginBottom="10"
         >
-            <Text fontWeight="bold" fontSize="2xl">Currency converter and Exchange Rate</Text>
-            <Text>Up to date FX Rates</Text>
+            <Text fontWeight="bold" fontSize="2xl">MTM - Exchange Rates</Text>
+            <Text>Up to date FX Rates and Affordable money transfer rates</Text>
         </Box>
     )
 }
